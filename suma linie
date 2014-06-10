@@ -1,0 +1,45 @@
+# include<iostream>
+# include<iomanip>
+using namespace std;
+
+void citire(int a[30][30], int &n, int &m)
+{
+    cout<<"Linii: ";    cin>>n;
+    cout<<"Coloane: ";  cin>>m;
+    for(int i=0;i<n;i++)
+        for(int j=0;j<m;j++)
+            cin>>a[i][j];
+}
+
+void afisare(int a[30][30], int n, int m)
+{
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+            cout<<setw(3)<<a[i][j];
+        cout<<endl;
+    }
+}
+
+void suma_linii(int a[30][30], int n, int m)
+{
+    int s;
+    for(int i=0;i<n;i++)
+    {
+        s=0;
+        for(int j=0;j<m;j++)
+            s=s+a[i][j];
+        cout<<endl<<"Suma pe linia "<<i<<" : "<<s;
+    }
+}
+
+int main()
+{
+    int a[30][30],n,m;
+    citire(a,n,m);
+    afisare(a,n,m);
+    suma_linii(a,n,m);
+
+
+	return 0;
+}
