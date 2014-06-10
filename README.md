@@ -1,2 +1,0 @@
-porofoliu_info
-==============
